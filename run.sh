@@ -22,7 +22,7 @@ osascript <<EOF
         activate
         tell current window
             tell current session
-                write text "ng serve"
+                write text "npm run dev:lib-install-locally && ng serve"
             end tell
             set newTab to (create tab with default profile)
             tell current session of newTab
