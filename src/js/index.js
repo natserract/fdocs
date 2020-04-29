@@ -1,1 +1,3 @@
-console.log("Hello");
+function hello_world() {
+    return "hello angular!"
+}
