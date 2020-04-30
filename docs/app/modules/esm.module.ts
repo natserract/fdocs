@@ -3,14 +3,39 @@ import { CommonModule } from '@angular/common';
 
 import { RoutingModule } from './esm-routing.module';
 import { GetStartedComponent } from './get-started/get-started.component';
+import { ComponentsComponent } from './components/components.component';
 
+import {
+  HighlightModule,
+  HIGHLIGHT_OPTIONS,
+  HighlightOptions
+} from 'ngx-highlightjs';
+
+export function getHighlightLanguages() {
+  return {
+    typescript: () => import('highlight.js/lib/languages/typescript'),
+    css: () => import('highlight.js/lib/languages/css'),
+    html: () => import('highlight.js/lib/languages/xml')
+  };
+}
 @NgModule({
   declarations: [
     GetStartedComponent,
+    ComponentsComponent
   ],
   imports: [
     CommonModule,
-    RoutingModule
-  ]
+    RoutingModule,
+    HighlightModule
+  ],
+  providers: [
+    {
+      provide: HIGHLIGHT_OPTIONS,
+      useValue: {
+        lineNumbers: true,
+        languages: getHighlightLanguages
+      }
+    }
+  ],
 })
 export class EsmModule { }

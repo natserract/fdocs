@@ -21,20 +21,11 @@ import {
     AppRoutingModule,
     HttpClientModule,
     CommonModule,
-    HighlightModule,
     EsmModule,
     SharedModule
   ],
   declarations: [
     AppComponent,
-  ],
-  providers: [
-    {
-      provide: HIGHLIGHT_OPTIONS,
-      useValue: {
-        lineNumbers: true
-      } as HighlightOptions
-    }
   ],
   bootstrap: [AppComponent]
 })
