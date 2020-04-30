@@ -1,27 +1,46 @@
-# Docs
+# fDocs - Design System Modular
+Code repository mengenai implementasi design system modular, dimana kita bisa sekaligus membuat suatu library local didalam satu source code dan meng-integrasikannya ke dalam sebuah dokumentasi (two way app bindings). 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.0.
+## Structure
+Berikut beberapa struktur direktori penting:
 
-## Development server
+  1. `src/`:  library development  -> nantinya akan menghasilkan output di dalam direktori `future`
+  2. `future/`: output `src/` -> integrasi packages/lib local ke dalam dokumentasi
+  3. `dist/`: src -> dist: hasil final output dari library
+  4. `docs/`: future -> docs: development dokumentasi
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Running
+Untuk memulai project ini di local ada beberapa setup yang harus dilakukan
+1. Jika MacOS, kamu punya iTerm. Kamu bisa menjalankannya dengan mudah, hanya mengetikkan perintah ini:
+```sh
+$ sudo chmod +x ./run.sh && ./run.sh
+```
+2. Jika running manual:
+   ```sh
+   $ npm run dev:lib-install-locally && ng serve
+   ``` 
+   -> untuk integrasi lib, dan menjalankan server (docs)
+   
+   Buat newtab baru:
+   ```sh
+   $ npm run dev:watch-sass
+   ```
+   -> rekam jejak perubahan sass/scss file
+   
+   Buat newtab baru lagi:
+   ```sh
+   $ npm run dev:watch-js
+   ```
+   -> rekam jejak perubahan js file
+3. Buka di browser [http://localhost:4200/](http://localhost:4200/)
 
 ## Build
+Build docs:
+```sh
+$ npm run prod:build-docs
+```
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+Build lib:
+```sh
+$ npm run prod:build-lib
+```
