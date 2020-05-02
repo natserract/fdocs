@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/docs",
+            "outputPath": "dist",
             "index": "docs/index.html",
             "main": "docs/main.ts",
             "polyfills": "docs/polyfills.ts",
@@ -28,9 +28,12 @@
               "docs/assets"
             ],
             "styles": [
-              "docs/styles.scss"
+              "docs/styles.scss",
+              "src/core/scss/salt.scss"
             ],
-            "scripts": []
+            "scripts": [
+              "src/index.ts"
+            ]
           },
           "configurations": {
             "production": {

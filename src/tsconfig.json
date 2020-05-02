@@ -1,0 +1,47 @@
+
+{
+    "compileOnSave": false,
+    "compilerOptions": {
+      "outDir": "./dist",
+      "rootDir": "./",
+      "target": "esnext",
+      "module": "esnext",
+      "moduleResolution": "node",
+      "emitDecoratorMetadata": true,
+      "experimentalDecorators": true,
+      "allowJs": false,
+      "sourceMap": true,
+      "inlineSources": true,
+      "noEmitHelpers": false,
+      "noImplicitAny": true,
+      "suppressImplicitAnyIndexErrors": true,
+      "declaration": true,
+      "skipLibCheck": false,
+      "stripInternal": true,
+      "strictNullChecks": false,
+      "allowSyntheticDefaultImports": true,
+      "noUnusedLocals": false,
+      "noUnusedParameters": false,
+      "lib": [
+        "es2018",
+        "dom"
+      ],
+      "types": [
+        "jasmine"
+      ]
+    },
+    "exclude": [
+      "node_modules",
+    ],
+    "files": [
+      "./index.ts",
+    ],
+    "angularCompilerOptions": {
+      "annotateForClosureCompiler": true,
+      "skipTemplateCodegen": true,
+      "strictMetadataEmit": true,
+      "fullTemplateTypeCheck": true,
+      "strictInjectionParameters": true,
+      "enableResourceInlining": true
+    }
+}

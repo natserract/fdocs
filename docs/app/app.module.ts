@@ -1,6 +1,8 @@
 import { BrowserModule, Title } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { ButtonsModule } from '../../@salt/api/components/';
+
 import { HttpClientModule } from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,9 +22,10 @@ import {
     BrowserModule.withServerTransition({ appId: 'angular-app' }),
     AppRoutingModule,
     HttpClientModule,
+    ButtonsModule,
     CommonModule,
     EsmModule,
-    SharedModule
+    SharedModule,
   ],
   declarations: [
     AppComponent,
