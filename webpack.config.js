@@ -3,19 +3,17 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/js/index.js', './src/scss/future.scss'],
-  mode: 'development',
+  entry: ['./projects/salt/src/lib/js/salt.js', './projects/salt/src/lib/scss/salt.scss'],
+  mode: 'production',
   output: {
-    path: path.resolve(__dirname, "./dist/"),
-    filename: 'js/future.js',
+    path: path.resolve(__dirname, "./dist/salt/lib/"),
+    filename: 'js/salt.min.js',
     publicPath: "/",
-  },
-  devServer: {
-    publicPath: "/",
-    compress: true,
-    port: 9000
   },
   devtool: 'inline-source-map',
+  resolve: {
+    extensions: [".ts", ".tsx", ".js"]
+  },
   module: {
     rules: [
       { 
@@ -23,16 +21,28 @@ module.exports = {
         use: ExtractTextPlugin.extract({
           use: ['css-loader', 'sass-loader', 'postcss-loader'],
         })
-      }
+      },
+      { 
+        test: /\.ts(x?)$/,
+        exclude: /node_modules/, 
+        loader: 'ts-loader'
+      }, 
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: {
+          loader: "babel-loader"
+        }
+      },
     ]
   },
   plugins: [
     new ExtractTextPlugin({ 
-      filename: 'css/future.css',
+      filename: 'css/salt.min.css',
       allChunks: true,
     }),
     new CopyPlugin([
-      { from: 'src/scss', to: 'scss' },
+      { from: 'project/salt/src/lib/scss', to: 'scss' },
     ]),
   ],
 };
