@@ -4,43 +4,31 @@ Code repository mengenai implementasi design system modular, dimana kita bisa se
 ## Structure
 Berikut beberapa struktur direktori penting:
 
-  1. `src/`:  library development  -> nantinya akan menghasilkan output di dalam direktori `future`
-  2. `future/`: output `src/` -> integrasi packages/lib local ke dalam dokumentasi
-  3. `dist/`: src -> dist: hasil final output dari library
-  4. `docs/`: future -> docs: development dokumentasi
+  1. `projects/`:  library development  -> nantinya akan menghasilkan output di dalam direktori `dist`
+  2. `dist/`: src -> dist: hasil final output dari library
+  3. `public/`: docs -> public: hasil final output dari docs
+  4. `docs/`: docs development
 
 ## Running
-Untuk memulai project ini di local ada beberapa setup yang harus dilakukan
-1. Jika MacOS, kamu punya iTerm. Kamu bisa menjalankannya dengan mudah, hanya mengetikkan perintah ini:
-```sh
-$ sudo chmod +x ./run.sh && ./run.sh
-```
-2. Jika running manual:
+Untuk memulai project ini di local, ketikkan perintah ini:
+1. Running:
    ```sh
-   $ npm run dev:lib-install-locally && ng serve
+   $ ng serve
    ``` 
-   -> untuk integrasi lib, dan menjalankan server (docs)
-   
-   Buat newtab baru:
-   ```sh
-   $ npm run dev:watch-sass
-   ```
-   -> rekam jejak perubahan sass/scss file
-   
-   Buat newtab baru lagi:
-   ```sh
-   $ npm run dev:watch-js
-   ```
-   -> rekam jejak perubahan js file
-3. Buka di browser [http://localhost:4200/](http://localhost:4200/)
+2. Buka di browser [http://localhost:4200/](http://localhost:4200/)
 
 ## Build
-Build docs:
+1. Jika MacOS, kamu punya iTerm. Kamu bisa menjalankannya dengan mudah, hanya mengetikkan perintah ini:
+```sh
+$ sudo chmod +x ./build.sh && ./build.sh
+```
+
+2. Build docs:
 ```sh
 $ npm run prod:build-docs
 ```
 
-Build lib:
+3. Build lib:
 ```sh
 $ npm run prod:build-lib
 ```
