@@ -45,4 +45,5 @@ testem.log
 Thumbs.db
 
 # Only for development
-@salt/
+dist/
+public/

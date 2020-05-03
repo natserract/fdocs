@@ -3,10 +3,10 @@ var ExtractTextPlugin = require('extract-text-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: ['./src/core/js/index.js', './src/core/scss/salt.scss'],
+  entry: ['./projects/salt/src/lib/js/salt.js', './projects/salt/src/lib/scss/salt.scss'],
   mode: 'production',
   output: {
-    path: path.resolve(__dirname, "./@salt/core/"),
+    path: path.resolve(__dirname, "./dist/salt/lib/"),
     filename: 'js/salt.min.js',
     publicPath: "/",
   },
@@ -42,7 +42,7 @@ module.exports = {
       allChunks: true,
     }),
     new CopyPlugin([
-      { from: 'src/core/scss', to: 'scss' },
+      { from: 'project/salt/src/lib/scss', to: 'scss' },
     ]),
   ],
 };

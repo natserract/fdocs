@@ -22,15 +22,11 @@ osascript <<EOF
         activate
         tell current window
             tell current session
-                write text "npm run dev:lib-install-locally && ng serve"
+                write text "npm run prod:build:lib"
             end tell
             set newTab to (create tab with default profile)
             tell current session of newTab
-                write text "cd \"$cdto\"$cmd && npm run dev:watch-sass"
-            end tell
-             set newTab to (create tab with default profile)
-            tell current session of newTab
-                write text "cd \"$cdto\"$cmd && npm run dev:watch-js"
+                write text "cd \"$cdto\"$cmd && npm run prod:build-docs"
             end tell
         end tell
     end tell

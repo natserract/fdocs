@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist",
+            "outputPath": "public",
             "index": "docs/index.html",
             "main": "docs/main.ts",
             "polyfills": "docs/polyfills.ts",
@@ -29,10 +29,9 @@
             ],
             "styles": [
               "docs/styles.scss",
-              "src/core/scss/salt.scss"
+              "projects/salt/src/lib/scss/salt.scss"
             ],
             "scripts": [
-              "src/index.ts"
             ]
           },
           "configurations": {
@@ -123,6 +122,46 @@
             "production": {
               "devServerTarget": "docs:serve:production"
             }
+          }
+        }
+      }
+    },
+    "salt": {
+      "projectType": "library",
+      "root": "projects/salt",
+      "sourceRoot": "projects/salt/src",
+      "prefix": "api",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/salt/tsconfig.lib.json",
+            "project": "projects/salt/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/salt/tsconfig.lib.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/salt/src/test.ts",
+            "tsConfig": "projects/salt/tsconfig.spec.json",
+            "karmaConfig": "projects/salt/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/salt/tsconfig.lib.json",
+              "projects/salt/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
           }
         }
       }

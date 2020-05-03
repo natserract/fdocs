@@ -4,4 +4,4 @@ function hello_world() {
     return alert();
 };
 
-exports.hello_world = hello_world;
+export default hello_world
