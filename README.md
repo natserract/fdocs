@@ -4,7 +4,7 @@ Code repository mengenai implementasi design system modular, dimana kita bisa se
 ## Structure
 Berikut beberapa struktur direktori penting:
 
-  1. `projects/`:  library development  -> nantinya akan menghasilkan output di dalam direktori `future`
+  1. `projects/`:  library development  -> nantinya akan menghasilkan output di dalam direktori `dist`
   2. `dist/`: src -> dist: hasil final output dari library
   3. `public/`: docs -> public: hasil final output dari docs
   4. `docs/`: docs development
@@ -23,13 +23,12 @@ Untuk memulai project ini di local, ketikkan perintah ini:
 $ sudo chmod +x ./build.sh && ./build.sh
 ```
 
-2. Build manual:
-Build docs:
+2. Build docs:
 ```sh
 $ npm run prod:build-docs
 ```
 
-Build lib:
+3. Build lib:
 ```sh
 $ npm run prod:build-lib
 ```
