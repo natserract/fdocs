@@ -1,4 +1,0 @@
-function alert() {
-    return "alert";
-}
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiYWxlcnQuanMiLCJzb3VyY2VSb290Ijoibmc6Ly9zYWx0LyIsInNvdXJjZXMiOlsibGliL2pzL3NyYy9hbGVydC5qcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiQUFDQSxTQUFTLEtBQUs7SUFDVixPQUFPLE9BQU8sQ0FBQztBQUNuQixDQUFDIiwic291cmNlc0NvbnRlbnQiOlsiXG5mdW5jdGlvbiBhbGVydCgpIHtcbiAgICByZXR1cm4gXCJhbGVydFwiO1xufSJdfQ==
