@@ -5,6 +5,8 @@ import { RoutingModule } from './esm-routing.module';
 import { GetStartedComponent } from './get-started/get-started.component';
 import { ComponentsComponent } from './components/components.component';
 
+import { SaltModule } from 'salt';
+
 import {
   HighlightModule,
   HIGHLIGHT_OPTIONS,
@@ -26,7 +28,8 @@ export function getHighlightLanguages() {
   imports: [
     CommonModule,
     RoutingModule,
-    HighlightModule
+    HighlightModule,
+    SaltModule
   ],
   providers: [
     {

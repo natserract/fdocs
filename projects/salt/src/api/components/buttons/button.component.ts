@@ -1,7 +1,8 @@
 
 import {
-    Component, Renderer2, Input, ElementRef, OnInit
+    Component, Renderer2, Input, ElementRef, OnInit, Injectable
 } from '@angular/core';
+
 
 @Component({
     selector: 'salt-button',
