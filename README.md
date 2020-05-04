@@ -1,5 +1,5 @@
 # fDocs - Design System Modular
-Code repository mengenai implementasi design system modular, dimana kita bisa sekaligus membuat suatu library local didalam satu source code dan meng-integrasikannya ke dalam sebuah dokumentasi (two way app bindings). 
+Code repository mengenai implementasi design system modular(two way app bindings). 
 
 ## Structure
 Berikut beberapa struktur direktori penting:
