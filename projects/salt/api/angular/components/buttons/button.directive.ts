@@ -13,6 +13,7 @@ import {
 import { ControlValueAccessor, NG_VALUE_ACCESSOR } from '@angular/forms';
 
 @Directive({
+    // tslint:disable-next-line: directive-selector
     selector: '[buttonCheckbox]',
 })
 
