@@ -1,17 +1,29 @@
+
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Example</title>
-    <link rel="stylesheet" href="../../node_modules/salt/lib/css/salt.min.css">
-
+    <title>Example using web component</title>
+    
+    <!-- root path-->
+    <base href="../../node_modules/">
 </head>
+
 <body>
-    <h1>Cara penggunaan lib</h1>
-    <button class="ft-button--primary">
-        Button!
-    </button>
+    <app-root></app-root>
+    <main class="main">
+        <h1>Example using web component</h1>
+        <salt-button value="Button Web Component"></salt-button>
+    </main>
 </body>
-    <script src="../../node_modules/salt/lib/js/salt.min.js"></script>
+
+    <!-- script tag should under app root -->
+    <script src="salt/api/webcomponent/runtime-es2015.js"></script>
+    <script src="salt/api/webcomponent/runtime-es5.js" nomodule defer></script>
+    <script src="salt/api/webcomponent/polyfills-es5.js" nomodule defer></script>
+    <script src="salt/api/webcomponent/polyfills-es2015.js"></script>
+    <script src="salt/api/webcomponent/main-es2015.js"></script>
+    <script src="salt/api/webcomponent/main-es5.js" nomodule defer></script>
 </html>
