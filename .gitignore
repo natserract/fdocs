@@ -47,3 +47,4 @@ Thumbs.db
 # Only for development
 dist/
 public/
+package-lock.json
