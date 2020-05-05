@@ -3,6 +3,7 @@ import { DoBootstrap, Injector } from '@angular/core';
 import { createCustomElement } from '@angular/elements';
 import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
 
+import { RootElementModule } from '../root.module';
 // Import all components
 import { ButtonComponent } from '../..';
 
@@ -14,18 +15,10 @@ import { ButtonComponent } from '../..';
     ButtonComponent
   ],
 })
-export class ButtonModule implements DoBootstrap {
+export class ButtonModule extends RootElementModule {
   constructor(
     injector: Injector
-  ){
-    const strategyFactory = new ElementZoneStrategyFactory(ButtonComponent, injector);
-    const webComponent = createCustomElement(
-      ButtonComponent,
-      { injector, strategyFactory }
-    );
-
-    customElements.define('salt-button', webComponent);
-  }
-
-  ngDoBootstrap(){}
+   ){
+    super(injector, ButtonComponent, 'button');
+   }
 }

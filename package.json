@@ -1,5 +1,6 @@
 {
   "name": "docs",
+  "description": "",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
@@ -16,6 +17,7 @@
     "link": "cd dist/salt && sudo npm link && cd .. && cd .. && npm link salt",
     "webpack:build": "webpack -p",
     "build:lib": "ng build salt",
+    "build:webcomponent": "ng run webcomponent:build:production --main='projects/salt/api/webcomponent/app/components/${component}/compile.ts'",
     "access": "sudo chown -R $USER /usr/local/lib/node_modules",
     "unlink": "cd dist/salt && sudo npm unlink && cd .. && cd .. && npm unlink && npm-run-all access",
     "clean:build": "rm -rf dist/salt",
