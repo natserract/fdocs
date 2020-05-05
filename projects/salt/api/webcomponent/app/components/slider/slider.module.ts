@@ -1,29 +1,30 @@
 import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { Injector } from '@angular/core';
-import { CommonModule } from '@angular/common';
 
 import { RootElementModule } from '../../root.module';
-import { ButtonComponent } from '../..';
+import { SliderComponent } from '../..';
+
+import { CommonModule } from '@angular/common';
 import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   imports: [
-    CommonModule,
-    BrowserModule
+    BrowserModule,
+    CommonModule
   ],
   declarations: [
-    ButtonComponent
+    SliderComponent
   ],
   entryComponents: [
-    ButtonComponent
+    SliderComponent
   ],
-  bootstrap: [ButtonComponent],
+  bootstrap: [SliderComponent],
   schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
 })
-export class ButtonModule extends RootElementModule {
+export class SliderModule extends RootElementModule {
   constructor(
     injector: Injector
    ){
-    super(injector, ButtonComponent, 'button');
+    super(injector, SliderComponent, 'slider');
    }
 }

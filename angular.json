@@ -176,7 +176,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/salt/api/webcomponent",
+            "outputPath": "tmp",
             "index": "projects/salt/api/webcomponent/index.html",
             "main": "projects/salt/api/webcomponent/main.ts",
             "polyfills": "projects/salt/api/webcomponent/polyfills.ts",

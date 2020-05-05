@@ -19,7 +19,10 @@
       "salt": [
         "dist/salt/salt",
         "dist/salt"
-      ]
+      ],
+      // "projects/salt/api/webcomponent/app/components/*": [
+      //   "projects/salt/api/webcomponent/app/components/*"
+      // ]
     }
   },
   "angularCompilerOptions": {

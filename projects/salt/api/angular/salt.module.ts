@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ButtonComponent } from './components/buttons/button.component';
 import { ButtonDirective } from './components/buttons/button.directive';
+import { SliderComponent } from './components/slider/slider.component';
 
 @NgModule({
   imports: [
@@ -9,11 +10,13 @@ import { ButtonDirective } from './components/buttons/button.directive';
   ],
   declarations: [
     ButtonComponent,
-    ButtonDirective
+    ButtonDirective,
+    SliderComponent
   ],
   exports: [
     ButtonComponent,
-    ButtonDirective
+    ButtonDirective,
+    SliderComponent
   ]
 })
 export class SaltModule {

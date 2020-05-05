@@ -14,6 +14,5 @@
   "include": [
     "**/*.spec.ts",
     "**/*.d.ts",
-    "./app/components/**/compile.ts"
   ]
 }

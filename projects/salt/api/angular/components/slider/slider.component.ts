@@ -4,10 +4,10 @@ import {
 } from '@angular/core';
 
 @Component({
-    selector: 'salt-button',
-    templateUrl: './button.component.html'
+    selector: 'salt-slider',
+    templateUrl: './slider.component.html'
 })
 
-export class ButtonComponent{
+export class SliderComponent{
     constructor(){}
 }
