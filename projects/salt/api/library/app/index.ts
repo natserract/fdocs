@@ -1,4 +1,3 @@
 export { ButtonComponent } from '../../angular/components/buttons/button.component';
-export { ButtonModule } from '../../angular/components/buttons/button.module';
+export { SaltModule } from '../../angular/';
 export { SliderComponent } from '../../angular/components/slider/slider.component';
-export { SliderModule } from '../../angular/components/slider/slider.module';

@@ -3,11 +3,10 @@ import { Injector } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RootElementModule } from '../../root.module';
-import { ButtonComponent,ButtonModule } from '../..';
-import { BrowserModule } from '@angular/platform-browser';
+import { ButtonComponent,  SaltModule } from '../..';
 
 @NgModule({
-  imports: [BrowserModule, ButtonModule],
+  imports: [SaltModule],
   entryComponents: [ButtonComponent],
 })
 export class ButtonElementModule extends RootElementModule {
