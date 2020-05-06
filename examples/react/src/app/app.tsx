@@ -4,7 +4,7 @@ import { hot } from "react-hot-loader";
 const App = () => (
     <main className="app">
        <h1>Hello React!</h1>
-       <salt-button value="I'm a Web Component"></salt-button>
+       <salt-button> I'm a Web Component </salt-button>
     </main>
 );
 
