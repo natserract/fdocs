@@ -16,5 +16,8 @@
   ],
   "include": [
     "docs/**/*.d.ts"
+  ],
+  "exclude": [
+    "examples/react"
   ]
 }

@@ -20,13 +20,14 @@
         "dist/salt/salt",
         "dist/salt"
       ],
-      // "projects/salt/api/library/app/components/*": [
-      //   "projects/salt/api/library/app/components/*"
-      // ]
-    }
+    },
+    "jsx": "preserve"
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,
     "strictInjectionParameters": true
-  }
+  },
+  "exclude": [
+    "examples/react"
+  ]
 }

@@ -14,5 +14,8 @@
   "include": [
     "docs/**/*.spec.ts",
     "docs/**/*.d.ts"
+  ],
+  "exclude": [
+    "examples/react"
   ]
 }
