@@ -1,28 +1,17 @@
-import { NgModule } from '@angular/core';
-import { DoBootstrap, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
-import { ButtonComponent } from '../..';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Injector } from '@angular/core';
+import { CommonModule } from '@angular/common';
+
+import { RootElementModule } from '../../root.module';
+import { ButtonComponent,ButtonModule } from '../..';
+import { BrowserModule } from '@angular/platform-browser';
+
 @NgModule({
-  declarations: [
-    ButtonComponent
-  ],
-  entryComponents: [
-    ButtonComponent
-  ]
+  imports: [BrowserModule, ButtonModule],
+  entryComponents: [ButtonComponent],
 })
-export class ButtonModule implements DoBootstrap {
-  constructor(
-    injector: Injector
-  ){
-    const strategyFactory = new ElementZoneStrategyFactory(ButtonComponent, injector);
-    const webComponent = createCustomElement(
-      ButtonComponent,
-      { injector, strategyFactory }
-    );
-
-    customElements.define('salt-button', webComponent);
+export class ButtonElementModule extends RootElementModule {
+  constructor(injector: Injector) {
+      super(injector, ButtonComponent, 'button');
   }
-
-  ngDoBootstrap(){}
 }

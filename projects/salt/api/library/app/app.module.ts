@@ -4,13 +4,13 @@ import { CommonModule } from '@angular/common';
 import { AppComponent } from './app.component';
 
 // Import all modules here
-import { ButtonModule } from './components/button/button.module';
+import { ButtonElementModule } from './components/button/button.module';
 
 @NgModule({
   imports: [
     CommonModule,
     BrowserModule,
-    ButtonModule,
+    ButtonElementModule,
   ],
   declarations: [
     AppComponent,

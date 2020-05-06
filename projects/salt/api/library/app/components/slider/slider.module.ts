@@ -1,29 +1,20 @@
-import { NgModule } from '@angular/core';
-import { DoBootstrap, Injector } from '@angular/core';
-import { createCustomElement } from '@angular/elements';
-import { ElementZoneStrategyFactory } from 'elements-zone-strategy';
-import { SliderComponent } from '../..';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { Injector } from '@angular/core';
+
+import { RootElementModule } from '../../root.module';
+import { SliderComponent,SliderModule } from '../..';
+
+import { CommonModule } from '@angular/common';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
-  declarations: [
-    SliderComponent
-  ],
-  entryComponents: [
-    SliderComponent
-  ]
+  imports: [BrowserModule, SliderModule],
+  entryComponents: [SliderComponent],
 })
-export class SliderModule implements DoBootstrap {
+export class SliderElementModule extends RootElementModule {
   constructor(
     injector: Injector
-  ){
-    const strategyFactory = new ElementZoneStrategyFactory(SliderComponent, injector);
-    const webComponent = createCustomElement(
-      SliderComponent,
-      { injector, strategyFactory }
-    );
-
-    customElements.define('salt-slider', webComponent);
-  }
-
-  ngDoBootstrap(){}
+   ){
+    super(injector, SliderComponent, 'slider');
+   }
 }

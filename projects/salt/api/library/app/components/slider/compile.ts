@@ -1,9 +1,9 @@
 
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { SliderModule } from './slider.module';
+import { SliderElementModule } from './slider.module';
 
 enableProdMode();
 
-platformBrowserDynamic().bootstrapModule(SliderModule)
+platformBrowserDynamic().bootstrapModule(SliderElementModule)
   .catch(err => console.error(err));
