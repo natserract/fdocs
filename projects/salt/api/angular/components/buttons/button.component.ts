@@ -10,4 +10,5 @@ import {
 
 export class ButtonComponent{
     constructor(){}
+    @Input() value:string;
 }
