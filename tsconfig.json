@@ -21,7 +21,13 @@
         "dist/salt"
       ],
     },
-    "jsx": "preserve"
+    "jsx": "preserve",
+    "types": [
+      "node"
+    ],
+    "typeRoots": [
+      "./node_modules/@types"
+    ]
   },
   "angularCompilerOptions": {
     "fullTemplateTypeCheck": true,

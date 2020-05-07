@@ -1,16 +1,39 @@
 var { lstatSync, readdirSync } = require('fs')
 var { join } = require('path')
-var {execSync} = require('child_process');
 
+// const path = "./projects/salt/api/library/app/components";
 const isDirectory = source => lstatSync(source).isDirectory();
 const getDirectories = source =>
   readdirSync(source).map(name => join(source, name)).filter(isDirectory);
 
-// let arr = getDirectories("./projects/salt/api/library/app/components");
-// (() => {
-//   return 'projects/salt/api/library/app/components/button/button.ts'
-// })()
+// const pathFn = getDirectories(path);
+// pathFn.forEach(pathItem => {
+//   let replacePath = pathItem.match(/([^\/]+).$/gm).join("");
+//   const findPath = `./${pathItem}/${replacePath}.module`;
+ 
+//   import('./projects/salt/api/library/app/components/button/button.module')
+//     .then((module) => {
+//       // module.ButtonElementModule
+//     })
+//     .catch(err => console.error(err))
+    
 
-const projects = ['angular-components-library', 'another-angular-components-library'];
+// })
 
-console.log("hello");
+// import("./projects/salt/api/library/app/components/button")
+// .then((module) => {
+//   // module.ButtonElementModule
+// })
+
+let path = [
+  './components/button',
+  './components/slider'
+];
+
+
+path.forEach(pathItem => {
+  const replacePath = pathItem.match(/([^\/]+).$/gm).join('');
+  const findPath = pathItem + '/' + replacePath + '.module';
+
+ console.log(findPath)
+});

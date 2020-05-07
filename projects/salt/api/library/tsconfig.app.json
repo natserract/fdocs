@@ -10,6 +10,6 @@
   ],
   "include": [
     "**/*.d.ts",
-    "./app/components/**/compile.ts"
+    "./app/components/compile.ts"
   ]
 }
