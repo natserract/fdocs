@@ -1,8 +1,8 @@
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
-import { ButtonElementModule } from './button.module';
+import { CarouselElementModule } from './carousel.module';
 
 enableProdMode();
 
-platformBrowserDynamic().bootstrapModule(ButtonElementModule)
+platformBrowserDynamic().bootstrapModule(CarouselElementModule)
 .catch(err => console.error(err));

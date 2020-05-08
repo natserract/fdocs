@@ -1,3 +1,5 @@
 export { SaltModule } from '../../angular/';
-export { ButtonComponent } from '../../angular/components/buttons/button.component';
-export { SliderComponent } from '../../angular/components/slider/slider.component';
+export { SliderComponent } from '../../angular/app/components/slider/slider.component';
+export { CardComponent } from '../../angular/app/components/card/card.component';
+export { ButtonComponent } from '../../angular/app/components/button/button.component';
+export { CarouselComponent } from '../../angular/app/components/carousel/carousel.component';

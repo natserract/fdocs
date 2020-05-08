@@ -1,9 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ButtonComponent } from './components/buttons/button.component';
-import { ButtonDirective } from './components/buttons/button.directive';
-import { SliderComponent } from './components/slider/slider.component';
+import { SliderComponent } from './app/components/slider/slider.component';
 import { BrowserModule } from '@angular/platform-browser';
+import { CardComponent } from './app/components/card/card.component';
+import { ButtonComponent } from './app/components/button/button.component';
+import { CarouselComponent } from './app/components/carousel/carousel.component';
 
 @NgModule({
   imports: [
@@ -11,14 +12,16 @@ import { BrowserModule } from '@angular/platform-browser';
     BrowserModule
   ],
   declarations: [
+    SliderComponent,
+    CardComponent,
     ButtonComponent,
-    ButtonDirective,
-    SliderComponent
+    CarouselComponent,
   ],
   exports: [
+    SliderComponent,
+    CardComponent,
     ButtonComponent,
-    ButtonDirective,
-    SliderComponent
+    CarouselComponent,
   ]
 })
 export class SaltModule {

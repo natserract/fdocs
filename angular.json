@@ -127,10 +127,10 @@
       }
     },
     "salt": {
-      "projectType": "library",
-      "root": "projects/salt",
-      "sourceRoot": "projects/salt/",
-      "prefix": "api",
+      "projectType": "application",
+      "root": "projects/salt/angular",
+      "sourceRoot": "projects/salt/api/angular",
+      "prefix": "angular",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-ng-packagr:build",
@@ -169,8 +169,8 @@
     "library": {
       "projectType": "application",
       "schematics": {},
-      "root": "projects/salt/api/library/app",
-      "sourceRoot": "projects/salt/api/library/app",
+      "root": "projects/salt/api/library/",
+      "sourceRoot": "projects/salt/api/library/",
       "prefix": "app",
       "architect": {
         "build": {

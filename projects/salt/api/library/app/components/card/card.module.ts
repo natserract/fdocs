@@ -2,17 +2,17 @@ import { NgModule } from '@angular/core';
 import { Injector } from '@angular/core';
 
 import { RootElementModule } from '../../root.module';
-import { ButtonComponent, SaltModule } from '../..';
+import { CardComponent, SaltModule } from '../..';
 
 @NgModule({
   imports: [SaltModule],
-  entryComponents: [ButtonComponent],
+  entryComponents: [CardComponent],
 })
-export class ButtonElementModule extends RootElementModule {
+export class CardElementModule extends RootElementModule {
   constructor(
     injector: Injector
    ){
-    super(injector, ButtonComponent, 'button');
+    super(injector, CardComponent, 'card');
    }
 }
 
